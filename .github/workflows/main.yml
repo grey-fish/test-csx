@@ -1,0 +1,14 @@
+name: Hello World Workflow
+
+on : [push]  # Run on every push
+
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run hello.py
+        run: python3 hello.py
